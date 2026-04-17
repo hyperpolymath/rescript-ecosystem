@@ -1,0 +1,225 @@
+// SPDX-License-Identifier: PMPL-1.0-or-later
+= ReScript Ecosystem — Community Donation Bundle
+Jonathan D.A. Jewell <j.d.a.jewell@open.ac.uk>
+:toc:
+:toc-placement: preamble
+
+[IMPORTANT]
+====
+**Seeking a maintainer from the ReScript community.**
+
+Hyperpolymath is looking for someone from the ReScript community to take
+over management of this ecosystem. These tools were built with real
+commitment — this is not a fire-and-forget dump. If you are interested in
+picking up one or more of these repositories, please open an issue on this
+wrapper repository, or reach out by email to
+mailto:j.d.a.jewell@open.ac.uk[j.d.a.jewell@open.ac.uk].
+====
+
+This document describes the six ReScript-related repositories in the
+hyperpolymath estate that are offered to the ReScript community for
+long-term stewardship.
+
+== Background
+
+Hyperpolymath is a research and engineering practice run by
+Jonathan D.A. Jewell, affiliated with The Open University. ReScript
+has been a primary front-end language in this estate since 2024, and
+several standalone tools were built during that work. With other project
+commitments growing, the time available to maintain and grow these
+libraries properly has reduced. Rather than let them stagnate, they are
+offered here to the community that is best placed to use and extend them.
+
+**A note on terminology you may encounter:**
+
+* *RSR (Rhodium Standard Repository)* — a repository quality standard
+  used internally. You may see RSR compliance badges in the child repos;
+  these are internal quality markers, not an external certification.
+* *PMPL-1.0-or-later* — the Palimpsest License, the preferred licence for
+  all hyperpolymath-original code. It extends MPL-2.0 with ethical-use
+  provisions and post-quantum provenance clauses. Because PMPL has not yet
+  been formally recognised by the OSI or equivalent bodies, MPL-2.0
+  operates as the automatic legally-recognised fallback — no separate
+  request is needed. If your registry requires an explicit OSI-approved
+  identifier, use MPL-2.0.
+* *Deno* — this estate uses Deno instead of Node/npm. All build tooling
+  in the libraries below uses `deno.json` imports, `deno run`, and `deno
+  test`. The build steps in each repo's README reflect this.
+
+== The Six Repositories
+
+[cols="1,2,2,1,1"]
+|===
+| Name | GitHub URL | Description | Licence | Status
+
+| `rescript`
+| https://github.com/hyperpolymath/rescript
+| Hyperpolymath fork of the upstream ReScript compiler
+  (`rescript-lang/rescript`), tracking upstream with estate-specific CI
+  integrations
+| LGPL-3.0-or-later (compiler), MIT (syntax + runtime + rewatch)
+| Fork — active, tracks upstream
+
+| `rescript-tea`
+| https://github.com/hyperpolymath/rescript-tea
+| The Elm Architecture for ReScript — a ground-up reimplementation
+  compatible with ReScript v12+, ES modules, and `@rescript/core`. Includes
+  virtual DOM diffing, SSR, Elm-style JSON decoders, time-travel debugger,
+  HTTP module, and a test harness. Zero runtime dependencies beyond
+  `@rescript/core`.
+| PMPL-1.0-or-later (MPL-2.0 legal fallback)
+| Active library
+
+| `rescript-evangeliser`
+| https://github.com/hyperpolymath/rescript-evangeliser
+| A pattern-detection engine, CLI, and teaching toolkit that helps
+  JavaScript developers learn ReScript through progressive code
+  transformation. 52 patterns across 21 categories, three view layers
+  (RAW / FOLDED / GLYPHED), Makaton-inspired glyph system. Philosophy:
+  "Celebrate good, minimize bad, show better."
+| PMPL-1.0-or-later (MPL-2.0 legal fallback)
+| Active tool (v0.5.0 alpha)
+
+| `rescript-string-power`
+| https://github.com/hyperpolymath/rescript-string-power
+| Tagged template utilities for ReScript — type-safe SQL, CSS, GraphQL,
+  i18n, URL, and React JSX interpolation. Zero PPX; pure library; ReScript
+  v13 native syntax. Includes a Rust CLI tool (`string-union-gen`) for
+  generating type-safe string converters from `@stringUnion`-annotated
+  polymorphic variants.
+| PMPL-1.0-or-later (MPL-2.0 legal fallback)
+| Active library
+
+| `bridge-web-rescript`
+| https://github.com/hyperpolymath/bridge-web-rescript
+| A TypeScript-free Progressive Web Application framework. All frontend
+  logic in ReScript compiled to WebAssembly. WCAG 2.3 AAA accessibility
+  as baseline; sign-language (BSL/GSL) resource support built in;
+  cryptographically-verified asset loading via an Ephapax WebFrame.
+| PMPL-1.0-or-later (MPL-2.0 legal fallback)
+| Specification-only — infrastructure and vision in place; implementation
+  not yet begun
+
+| `rescript-wasm-runtime`
+| https://github.com/hyperpolymath/rescript-wasm-runtime
+| Deno + WebAssembly runtime bindings for ReScript. Provides Deno and Bun
+  runtime bindings, an HTTP server with type-safe routing and middleware,
+  streaming / SSE, file upload, session management, and WASM compilation
+  utilities. Ships with 10 example applications.
+| MIT OR AGPL-3.0-or-later (your choice)
+| Active library
+|===
+
+== Relationships Between Children
+
+These six repositories are largely independent; none hard-depends on another
+within this bundle. However, there are meaningful relationships:
+
+**Compiler dependency (all libraries → `rescript` fork):**
+All four active libraries (`rescript-tea`, `rescript-evangeliser`,
+`rescript-string-power`, `rescript-wasm-runtime`) depend on `npm:rescript`
+at build time. The `rescript` repo here is a fork of the upstream compiler;
+in practice, the libraries consume the upstream NPM package, not the fork
+directly. The fork exists to track upstream with CI integrations. If you
+adopt any of the libraries, you do not need the fork unless you want to
+track upstream changes yourself.
+
+**Complementary tools (`rescript-evangeliser` + `rescript-string-power`):**
+`rescript-evangeliser` helps JavaScript developers discover the ReScript
+patterns that `rescript-string-power` implements. They are not linked at the
+code level — no import relationship — but they serve the same adoption
+journey: the Evangeliser shows developers _why_ to move patterns to
+ReScript; String Power shows them _how_ to write those patterns idiomatically
+once they do.
+
+**Framework + library pairing (`bridge-web-rescript` + `rescript-tea`):**
+The Bridge framework specification calls out PWA and progressive rendering;
+The Elm Architecture is a natural component model for exactly this kind of
+application. There is no code dependency currently (Bridge is specification-
+only), but the two are designed to be used together once Bridge progresses
+to implementation.
+
+**Runtime target (`bridge-web-rescript` + `rescript-wasm-runtime`):**
+Bridge compiles ReScript to WebAssembly; `rescript-wasm-runtime` provides
+the Deno/WASM runtime bindings. These are not linked in code yet (Bridge
+is specification-only), but they form two halves of the same deployment
+story: Bridge produces WASM, the WASM runtime hosts it.
+
+**No link confirmed:**
+No cross-references were found between `rescript-evangeliser` and
+`rescript-string-power` at the source level (no shared imports, no README
+cross-references). The relationship described above is structural, not
+code-level.
+
+== Notes on Specific Repositories
+
+=== `rescript` (compiler fork)
+
+The README in the fork is currently minimal (a header only). The fork
+carries the upstream `rescript-lang/rescript` codebase plus hyperpolymath
+CI integrations. The upstream licence structure is complex:
+
+* `compiler/`: LGPL-3.0-or-later
+* `compiler/syntax/`, `packages/@rescript/runtime/`, `rewatch/`: MIT
+
+Consult the upstream repository at https://github.com/rescript-lang/rescript
+for full licence texts. The fork does not change the upstream licences.
+
+=== `rescript-wasm-runtime`
+
+The README describes a substantial runtime with 9 core modules and 10
+example applications. The `deno.json` currently references `mod.ts` (a
+TypeScript entry point). This predates the estate's TypeScript ban and is
+flagged for conversion to ReScript; a `TS_CONVERSION_NEEDED.md` file exists
+in the repo acknowledging this. A recipient community should be aware of
+this technical debt. The licence (MIT OR AGPL-3.0-or-later) is more
+permissive than the other children.
+
+=== `bridge-web-rescript`
+
+This is entirely at specification stage. There is no runnable implementation.
+The value being offered is the design, governance infrastructure, and
+roadmap — a strong foundation for someone who wants to build the framework.
+
+== Handover Mechanics
+
+Each child is its own independent git repository with its own GitHub remote
+under `https://github.com/hyperpolymath/`. This wrapper repository holds
+only documentation and metadata — it does not embed the children as
+submodules or otherwise couple them.
+
+There are two standard routes for a community recipient:
+
+**Option A — GitHub repository transfer:**
+The owner can transfer each repository to a new owner or organisation via
+GitHub Settings → Transfer. This moves the repo, its issues, PRs, and stars
+to the recipient. Original URLs redirect automatically for a period. This is
+the cleanest option if the ReScript community or a named maintainer has a
+GitHub organisation to transfer into.
+
+**Option B — Community fork:**
+The recipient forks one or more children into their own namespace. The
+hyperpolymath originals remain visible as the upstream. This is appropriate
+if the recipient wants to evaluate before committing, or if a transfer is
+administratively complex.
+
+There is no obligation to take everything as a bundle. Individual repositories
+can be adopted independently.
+
+== Licence Statement
+
+This wrapper repository (the `TRANSFER.adoc`, `README.adoc`, `MANIFEST.a2ml`,
+and `LICENSE` at the root) is original documentation by Jonathan D.A. Jewell,
+licensed under **PMPL-1.0-or-later** with MPL-2.0 as the operative legal
+fallback.
+
+Per-child licences are preserved as-is and documented in the table above.
+Children are not relicensed by being listed here. See each child's own
+`LICENSE` or `LICENSE.txt` file for the authoritative text.
+
+== Contact
+
+Open an issue on this wrapper repository, or reach out by email:
+mailto:j.d.a.jewell@open.ac.uk[j.d.a.jewell@open.ac.uk]
+
+GitHub profile: https://github.com/hyperpolymath

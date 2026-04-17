@@ -1,0 +1,61 @@
+# SPDX-License-Identifier: PMPL-1.0-or-later
+# ReScript Ecosystem Donation Bundle — Machine-Readable Manifest
+# Format: A2ML (TOML-like structured data for agent/tool consumption)
+
+[meta]
+generated_on = "2026-04-17"
+wrapper_version = "1.0.0"
+donation_target = "ReScript community"
+contact = "j.d.a.jewell@open.ac.uk"
+wrapper_repo = "https://github.com/hyperpolymath/rescript-ecosystem"
+
+[[child]]
+name = "rescript"
+repo_url = "https://github.com/hyperpolymath/rescript"
+licence = "LGPL-3.0-or-later (compiler); MIT (syntax, runtime, rewatch)"
+status = "fork-active"
+role = "fork"
+description = "Hyperpolymath fork of the upstream ReScript compiler (rescript-lang/rescript), tracking upstream with estate-specific CI integrations."
+upstream = "https://github.com/rescript-lang/rescript"
+readme_quality = "thin — README contains only a heading; see upstream for full documentation"
+
+[[child]]
+name = "rescript-tea"
+repo_url = "https://github.com/hyperpolymath/rescript-tea"
+licence = "PMPL-1.0-or-later (MPL-2.0 legal fallback)"
+status = "active"
+role = "library"
+description = "The Elm Architecture for ReScript — ground-up reimplementation for ReScript v12+, ES modules, @rescript/core. Includes virtual DOM diffing, SSR, Elm-style JSON decoders, time-travel debugger, HTTP module, and test harness. Zero runtime deps beyond @rescript/core."
+
+[[child]]
+name = "rescript-evangeliser"
+repo_url = "https://github.com/hyperpolymath/rescript-evangeliser"
+licence = "PMPL-1.0-or-later (MPL-2.0 legal fallback)"
+status = "active"
+role = "tool"
+description = "JS-to-ReScript pattern-detection engine, CLI, and educational toolkit. 52 patterns across 21 categories, three view layers (RAW/FOLDED/GLYPHED), Makaton-inspired glyph system. Philosophy: celebrate good, minimize bad, show better."
+version = "0.5.0-alpha"
+
+[[child]]
+name = "rescript-string-power"
+repo_url = "https://github.com/hyperpolymath/rescript-string-power"
+licence = "PMPL-1.0-or-later (MPL-2.0 legal fallback)"
+status = "active"
+role = "library"
+description = "Tagged template utilities for ReScript — type-safe SQL, CSS, GraphQL, i18n, URL, and React JSX interpolation. Zero PPX, pure library, ReScript v13 native syntax. Ships with string-union-gen Rust CLI tool for generating type-safe string converters."
+
+[[child]]
+name = "bridge-web-rescript"
+repo_url = "https://github.com/hyperpolymath/bridge-web-rescript"
+licence = "PMPL-1.0-or-later (MPL-2.0 legal fallback)"
+status = "specification-only"
+role = "specification"
+description = "TypeScript-free Progressive Web Application framework. ReScript compiled to WebAssembly, WCAG 2.3 AAA baseline accessibility, sign-language (BSL/GSL) resource support, cryptographically-verified asset loading. Infrastructure and governance in place; implementation not yet begun."
+
+[[child]]
+name = "rescript-wasm-runtime"
+repo_url = "https://github.com/hyperpolymath/rescript-wasm-runtime"
+licence = "MIT OR AGPL-3.0-or-later"
+status = "active"
+role = "library"
+description = "Deno and WASM runtime bindings for ReScript. HTTP server with type-safe routing and middleware pipeline, streaming/SSE, file upload, session management, WASM compilation utilities. Ships with 10 example applications. Note: entry point (mod.ts) is currently TypeScript pending conversion to ReScript."

@@ -1,0 +1,37 @@
+// SPDX-License-Identifier: PMPL-1.0-or-later
+= ReScript Ecosystem — Donation Staging Wrapper
+Jonathan D.A. Jewell <j.d.a.jewell@open.ac.uk>
+:toc: preamble
+
+This repository is a **donation-staging wrapper** for six ReScript-related
+libraries and tools built by
+https://github.com/hyperpolymath[Hyperpolymath]. The work is offered to the
+ReScript community for long-term stewardship.
+
+== What is here
+
+Six independent repositories are collected under this wrapper:
+
+* **rescript** — hyperpolymath fork of the upstream ReScript compiler
+* **rescript-tea** — The Elm Architecture for ReScript (v12+, ES modules, zero deps)
+* **rescript-evangeliser** — JS→ReScript pattern-detection and teaching toolkit
+* **rescript-string-power** — Tagged template utilities (SQL, CSS, GraphQL, i18n)
+* **bridge-web-rescript** — TypeScript-free PWA framework (specification stage)
+* **rescript-wasm-runtime** — Deno + WASM runtime bindings for ReScript
+
+Each child is its own git repository with its own GitHub remote under
+`github.com/hyperpolymath/`. This wrapper holds only documentation and a
+machine-readable manifest; the children are referenced by URL, not embedded.
+
+== Read more
+
+For the full handover document — background, descriptions, licence details,
+relationship map, and instructions for taking ownership — see
+link:TRANSFER.adoc[TRANSFER.adoc].
+
+== Interested in maintaining one of these?
+
+Please open an issue on this repository or email
+mailto:j.d.a.jewell@open.ac.uk[j.d.a.jewell@open.ac.uk]. Each repository
+can be transferred or forked independently; you do not need to take the full
+bundle.
