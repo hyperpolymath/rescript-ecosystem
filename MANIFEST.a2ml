@@ -3,8 +3,8 @@
 # Format: A2ML (TOML-like structured data for agent/tool consumption)
 
 [meta]
-generated_on = "2026-04-17"
-wrapper_version = "1.0.0"
+generated_on = "2026-04-25"
+wrapper_version = "1.1.0"
 donation_target = "ReScript community"
 contact = "j.d.a.jewell@open.ac.uk"
 wrapper_repo = "https://github.com/hyperpolymath/rescript-ecosystem"
@@ -51,6 +51,16 @@ licence = "PMPL-1.0-or-later (MPL-2.0 legal fallback)"
 status = "specification-only"
 role = "specification"
 description = "TypeScript-free Progressive Web Application framework. ReScript compiled to WebAssembly, WCAG 2.3 AAA baseline accessibility, sign-language (BSL/GSL) resource support, cryptographically-verified asset loading. Infrastructure and governance in place; implementation not yet begun."
+
+[[child]]
+name = "rescript-vite"
+repo_url = "https://github.com/hyperpolymath/rescript-vite"
+licence = "PMPL-1.0-or-later (MPL-2.0 legal fallback)"
+status = "active"
+role = "developer-tooling"
+description = "Zero-config ReScript + Vite integration for modern web development. Production-ready with comprehensive examples (form validation, API fetching, component patterns, routing, state management, testing), six project templates (SPA, SSG, component library, real-time, API-driven, Deno/CLI), 15-minute getting-started tutorial, and automated project scaffolder. Features instant HMR, TypeScript-free experience, and full React interop."
+version = "1.0.0"
+readme_quality = "complete — ECOSYSTEM-COMPLETE.md capstone summary"
 
 [[child]]
 name = "rescript-wasm-runtime"

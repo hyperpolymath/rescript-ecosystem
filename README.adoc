@@ -10,12 +10,13 @@ ReScript community for long-term stewardship.
 
 == What is here
 
-Six independent repositories are collected under this wrapper:
+Seven independent repositories are collected under this wrapper:
 
 * **rescript** — hyperpolymath fork of the upstream ReScript compiler
 * **rescript-tea** — The Elm Architecture for ReScript (v12+, ES modules, zero deps)
 * **rescript-evangeliser** — JS→ReScript pattern-detection and teaching toolkit
 * **rescript-string-power** — Tagged template utilities (SQL, CSS, GraphQL, i18n)
+* **rescript-vite** — Zero-config ReScript + Vite with examples, templates, tutorial, and scaffolder (production-ready)
 * **bridge-web-rescript** — TypeScript-free PWA framework (specification stage)
 * **rescript-wasm-runtime** — Deno + WASM runtime bindings for ReScript
 
