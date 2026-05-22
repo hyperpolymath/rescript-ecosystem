@@ -1,5 +1,5 @@
 image:https://img.shields.io/badge/License-PMPL--1.0-blue.svg[License: PMPL-1.0,link="https://github.com/hyperpolymath/palimpsest-license"]
-// SPDX-License-Identifier: PMPL-1.0-or-later
+// SPDX-License-Identifier: MPL-2.0
 // SPDX-FileCopyrightText: 2024-2025 hyperpolymath
 
 = Bridge: Web-ReScript
@@ -220,7 +220,7 @@ See link:SECURITY.md[SECURITY.md] for:
 Dual-licensed under your choice of:
 
 * **Palimpsest-MPL License v1.0 (PMPL-1.0)** - Maximum flexibility
-* **PMPL-1.0-or-later** - Copyleft for network services
+* **MPL-2.0** - Copyleft for network services
 
 See link:LICENSE.txt[LICENSE.txt] for full terms.
 

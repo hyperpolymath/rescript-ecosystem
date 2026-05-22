@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: PMPL-1.0-or-later
+// SPDX-License-Identifier: MPL-2.0
 = ReScript Ecosystem — Community Donation Bundle
 Jonathan D.A. Jewell <j.d.a.jewell@open.ac.uk>
 :toc:
@@ -35,7 +35,7 @@ offered here to the community that is best placed to use and extend them.
 * *RSR (Rhodium Standard Repository)* — a repository quality standard
   used internally. You may see RSR compliance badges in the child repos;
   these are internal quality markers, not an external certification.
-* *PMPL-1.0-or-later* — the Palimpsest License, the preferred licence for
+* *MPL-2.0* — the Palimpsest License, the preferred licence for
   all hyperpolymath-original code. It extends MPL-2.0 with ethical-use
   provisions and post-quantum provenance clauses. Because PMPL has not yet
   been formally recognised by the OSI or equivalent bodies, MPL-2.0
@@ -67,7 +67,7 @@ offered here to the community that is best placed to use and extend them.
   virtual DOM diffing, SSR, Elm-style JSON decoders, time-travel debugger,
   HTTP module, and a test harness. Zero runtime dependencies beyond
   `@rescript/core`.
-| PMPL-1.0-or-later (MPL-2.0 legal fallback)
+| MPL-2.0 (MPL-2.0 legal fallback)
 | Active library
 
 | `rescript-evangeliser`
@@ -77,7 +77,7 @@ offered here to the community that is best placed to use and extend them.
   transformation. 52 patterns across 21 categories, three view layers
   (RAW / FOLDED / GLYPHED), Makaton-inspired glyph system. Philosophy:
   "Celebrate good, minimize bad, show better."
-| PMPL-1.0-or-later (MPL-2.0 legal fallback)
+| MPL-2.0 (MPL-2.0 legal fallback)
 | Active tool (v0.5.0 alpha)
 
 | `rescript-string-power`
@@ -87,7 +87,7 @@ offered here to the community that is best placed to use and extend them.
   v13 native syntax. Includes a Rust CLI tool (`string-union-gen`) for
   generating type-safe string converters from `@stringUnion`-annotated
   polymorphic variants.
-| PMPL-1.0-or-later (MPL-2.0 legal fallback)
+| MPL-2.0 (MPL-2.0 legal fallback)
 | Active library
 
 | `bridge-web-rescript`
@@ -96,7 +96,7 @@ offered here to the community that is best placed to use and extend them.
   logic in ReScript compiled to WebAssembly. WCAG 2.3 AAA accessibility
   as baseline; sign-language (BSL/GSL) resource support built in;
   cryptographically-verified asset loading via an Ephapax WebFrame.
-| PMPL-1.0-or-later (MPL-2.0 legal fallback)
+| MPL-2.0 (MPL-2.0 legal fallback)
 | Specification-only — infrastructure and vision in place; implementation
   not yet begun
 
@@ -210,7 +210,7 @@ can be adopted independently.
 
 This wrapper repository (the `TRANSFER.adoc`, `README.adoc`, `MANIFEST.a2ml`,
 and `LICENSE` at the root) is original documentation by Jonathan D.A. Jewell,
-licensed under **PMPL-1.0-or-later** with MPL-2.0 as the operative legal
+licensed under **MPL-2.0** with MPL-2.0 as the operative legal
 fallback.
 
 Per-child licences are preserved as-is and documented in the table above.
