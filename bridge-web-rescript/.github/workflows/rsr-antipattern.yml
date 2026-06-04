@@ -13,6 +13,7 @@ jobs:
   check-banned-patterns:
     name: Check for banned languages/patterns
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
       

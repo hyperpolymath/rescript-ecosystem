@@ -1,10 +1,11 @@
 // SPDX-License-Identifier: MPL-2.0
+// Copyright (c) Jonathan D.A. Jewell <j.d.a.jewell@open.ac.uk>
 = ReScript Ecosystem — Donation Staging Wrapper
 Jonathan D.A. Jewell <j.d.a.jewell@open.ac.uk>
 :toc: preamble
 
 image:https://img.shields.io/badge/OpenSSF-Best_Practices-green?logo=opensourcesecurity[OpenSSF Best Practices,link="https://www.bestpractices.dev/en/projects/new?repo_url=https://github.com/hyperpolymath/rescript-developer-ecosystem"]
-image:https://img.shields.io/badge/License-PMPL--1.0-blue.svg[License: PMPL-1.0,link="https://github.com/hyperpolymath/palimpsest-license"]
+image:https://img.shields.io/badge/License-MPL_2.0-blue.svg[License: MPL-2.0,link="https://opensource.org/licenses/MPL-2.0"]
 image:https://api.thegreenwebfoundation.org/greencheckimage/github.com[Green Web,link="https://www.thegreenwebfoundation.org/green-web-check/?url=github.com"]
 
 This repository is a **donation-staging wrapper** for six ReScript-related
@@ -40,3 +41,10 @@ Please open an issue on this repository or email
 mailto:j.d.a.jewell@open.ac.uk[j.d.a.jewell@open.ac.uk]. Each repository
 can be transferred or forked independently; you do not need to take the full
 bundle.
+
+
+== License
+
+This project is licensed under the Mozilla Public License, v. 2.0. See the `LICENSE` file for details.
+
+SPDX-License-Identifier: MPL-2.0
