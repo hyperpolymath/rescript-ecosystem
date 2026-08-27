@@ -32,13 +32,23 @@ jobs:
           fi
           echo "✓ No Go files found"
       
-      - name: Check for npm/Node artifacts
+      - name: Check for competing package-manager lockfiles
         run: |
-          if [ -f "package-lock.json" ] || [ -d "node_modules" ]; then
-            echo "::error::npm artifacts found! Use Deno instead (per RSR policy)"
-            exit 1
-          fi
-          echo "✓ No npm artifacts found"
+          # Bun is the estate JS runtime and package manager (owner ruling
+          # 2026-08-26). `bun install` CREATES node_modules, so its presence is
+          # no longer an antipattern — the antipattern is a COMPETING lockfile
+          # from npm, yarn or pnpm alongside bun.lock.
+          #
+          # Previously this step rejected node_modules outright and told the
+          # reader to "use Deno instead", which made obeying .claude/CLAUDE.md
+          # fail this repo's own CI.
+          for lock in package-lock.json yarn.lock pnpm-lock.yaml; do
+            if [ -f "$lock" ]; then
+              echo "::error::$lock found! Use Bun — package.json + bun.lock (per RSR policy)"
+              exit 1
+            fi
+          done
+          echo "✓ No competing npm/yarn/pnpm lockfiles found"
       
       - name: Check for Python (non-SaltStack)
         run: |
