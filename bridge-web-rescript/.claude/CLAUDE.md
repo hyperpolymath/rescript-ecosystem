@@ -24,13 +24,13 @@
 
 | Banned | Replacement |
 |--------|-------------|
-| TypeScript | ReScript |
+| TypeScript | AffineScript |
 | Deno | Bun |
 | Node.js | Bun |
 | npm | Bun |
 | pnpm/yarn | Bun |
 | Go | Rust |
-| Python | Julia/Rust/ReScript |
+| Python | Julia/Rust/AffineScript |
 | Java/Kotlin | Rust/Tauri/Dioxus |
 | Swift | Tauri/Dioxus |
 | React Native | Tauri/Dioxus |
