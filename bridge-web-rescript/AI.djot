@@ -37,7 +37,7 @@ Additional artefact:
 
 | Language/Tool | Use Case | Notes |
 |---------------|----------|-------|
-| ReScript | Application code | Type-safe, compiles to JS |
+| AffineScript | Application code | Type-safe, compiles to JS |
 | Bun | Runtime and package management | Replaces Node/npm/Deno |
 | Rust | Systems, performance-critical, WASM | Preferred for CLI tools |
 | Tauri 2.0+ | Mobile apps (iOS/Android) | Rust backend + web UI |
@@ -78,11 +78,11 @@ Both are FOSS with independent governance.
 
 ## Enforcement Rules
 
-- Do not create new TypeScript files; convert existing TS to ReScript.
-- Do not use `package.json` for runtime dependencies; use `deno.json` imports.
-- Do not include `node_modules` in production; Deno handles dependency caching.
+- Do not create new TypeScript files; convert existing TS to AffineScript.
+- Use `package.json` + `bun.lock` for JS runtime deps; Bun is npm-compatible.
+- `bun install --production` for production deps.
 - Do not use Go; use Rust.
-- Do not use Python; use Julia (data/batch), Rust (systems), or ReScript (apps).
+- Do not use Python; use Julia (data/batch), Rust (systems), or AffineScript (apps).
 - Do not use Kotlin/Swift; use Tauri 2.0+ or Dioxus for mobile.
 
 ## Package Management
