@@ -42,9 +42,10 @@ offered here to the community that is best placed to use and extend them.
   operates as the automatic legally-recognised fallback — no separate
   request is needed. If your registry requires an explicit OSI-approved
   identifier, use MPL-2.0.
-* *Deno* — this estate generally uses Deno instead of Node/npm (except ridge-web-rescript which uses Bun). All build tooling
-  in the libraries below uses `deno.json` imports, `deno run`, and `deno
-  test`. The build steps in each repo's README reflect this.
+* *Deno* — repositories in this estate other than `bridge-web-rescript`,
+  which uses Bun, generally use Deno instead of Node/npm. Their build tooling
+  uses `deno.json` imports, `deno run`, and `deno test`. The build steps in
+  those repositories' README files reflect this.
 
 == The Six Repositories
 

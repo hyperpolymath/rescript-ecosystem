@@ -89,7 +89,7 @@ Both are FOSS with independent governance.
 
 - Primary: Guix (`guix.scm`)
 - Fallback: Nix (`flake.nix`)
-- JavaScript dependencies: Deno (`deno.json` imports)
+- JavaScript dependencies: Bun (`package.json` + `bun.lock`)
 
 ## Security Requirements
 
