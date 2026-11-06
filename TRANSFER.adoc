@@ -94,7 +94,8 @@ states that consolidation is partial and that some packages diverge or duplicate
 one another. That record includes historical build results, not a fresh build
 verification for this handover.
 
-For Bridge, `node --test tests/bridge_test.mjs` fails before running a test:
+For Bridge, `node --test bridge-web-rescript/tests/bridge_test.mjs` from the
+wrapper root fails before running a test:
 Node cannot import `lib/es6/src/Bridge.mjs` because that build output is absent.
 This is a recorded verification failure, not a claim that the intended
 framework behaviour is broken or complete.
