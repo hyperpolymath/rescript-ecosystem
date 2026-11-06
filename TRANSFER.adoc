@@ -5,19 +5,20 @@ Jonathan D.A. Jewell <j.d.a.jewell@open.ac.uk>
 
 Checked on 2026-11-06 against the default branch of this wrapper, the
 current `developer-ecosystem` tree, and accessible GitHub repositories.
-This replaces the earlier transfer
-description, which remains in Git history. A Gitlink (`160000` tree entry)
-records a commit ID, not the source contents. This wrapper has no `.gitmodules`
-file to identify or fetch those child repositories.
+This replaces the earlier transfer description, which remains in Git history.
+Five former Gitlinks (`160000` tree entries) have been removed from the
+wrapper because they lacked `.gitmodules` URLs and prevented recursive checkout.
+They recorded commit IDs, not source contents; the IDs are retained below.
 
 == Inventory
 
 [cols="2,2,3,3",options="header"]
 |===
-| Item | Current wrapper entry | Accessible source | Handover status
+| Item | Wrapper record | Accessible source | Handover status
 
 | `rescript`
-| Gitlink `bf27354209c30432d3fac61172d451a8a4864f6c`
+| Former Gitlink `bf27354209c30432d3fac61172d451a8a4864f6c`; no
+  current tree entry.
 | https://github.com/hyperpolymath/rescript[Repository] is accessible but
   archived. GitHub does not resolve the wrapper's pointed-to commit there.
 | A compiler tree also exists at
@@ -26,7 +27,8 @@ file to identify or fetch those child repositories.
   build, and upstream attribution need review. Not ready.
 
 | `rescript-tea`
-| Gitlink `eee5abaa80e851c818160ae365c4f281cade8328`
+| Former Gitlink `eee5abaa80e851c818160ae365c4f281cade8328`; no
+  current tree entry.
 | Advertised standalone repository is unavailable. A tracked
   https://github.com/hyperpolymath/developer-ecosystem/tree/main/rescript-ecosystem/rescript-tea[source directory]
   exists in `developer-ecosystem`.
@@ -34,7 +36,8 @@ file to identify or fetch those child repositories.
   validate the current build and reconcile before offering it.
 
 | `rescript-evangeliser`
-| Gitlink `3b97c7846c8ad52b076858dcabfb80cfff400893`
+| Former Gitlink `3b97c7846c8ad52b076858dcabfb80cfff400893`; no
+  current tree entry.
 | Advertised standalone repository is unavailable. A tracked
   https://github.com/hyperpolymath/developer-ecosystem/tree/main/rescript-ecosystem/rescript-evangeliser[source directory]
   exists in `developer-ecosystem`.
@@ -42,7 +45,8 @@ file to identify or fetch those child repositories.
   validate the implementation before offering it.
 
 | `rescript-string-power`
-| Gitlink `1281d9e8ff27347dfe9ee820898f18baa5780d77`
+| Former Gitlink `1281d9e8ff27347dfe9ee820898f18baa5780d77`; no
+  current tree entry.
 | Advertised standalone repository is unavailable. A tracked
   https://github.com/hyperpolymath/developer-ecosystem/tree/main/rescript-ecosystem/rescript-string-power[source directory]
   exists in `developer-ecosystem`.
@@ -50,7 +54,8 @@ file to identify or fetch those child repositories.
   offering it.
 
 | `rescript-vite`
-| Gitlink `1efd0b0c0823202e69959e55fc2b06c705bd218d`
+| Former Gitlink `1efd0b0c0823202e69959e55fc2b06c705bd218d`; no
+  current tree entry.
 | Advertised standalone repository is unavailable. A tracked
   https://github.com/hyperpolymath/developer-ecosystem/tree/main/rescript-ecosystem/rescript-vite[source directory]
   exists in `developer-ecosystem`.
@@ -127,6 +132,8 @@ decisions, and neither is appropriate for an unresolved pointer.
   an accessible copy and the handover is confirmed.
 
 For verification, inspect the wrapper with `git ls-tree HEAD` and
-`git ls-tree -r HEAD bridge-web-rescript`. Check each advertised GitHub URL and
+`git ls-tree -r HEAD bridge-web-rescript`. The former pointers remain at
+wrapper commit `874512f4d248864332cce3c02b07f923b4a0bd9c`.
+Check each advertised GitHub URL and
 the `rescript` commit through the GitHub repository API. The current
 machine-readable account is link:MANIFEST.a2ml[MANIFEST.a2ml].

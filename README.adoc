@@ -9,10 +9,12 @@ not presently a bundle of seven independently transferable repositories.
 As checked on 2026-11-06, the advertised standalone URLs for five named tools
 are unavailable. Their source instead exists under
 https://github.com/hyperpolymath/developer-ecosystem/tree/main/rescript-ecosystem[developer-ecosystem/rescript-ecosystem],
-where consolidation is explicitly described as incomplete. This wrapper has
-four corresponding Git commit pointers without `.gitmodules` or source content.
-Its `rescript` pointer does not resolve to a commit in the currently accessible
-archived compiler repository, although a compiler tree is also present in the
+where consolidation is explicitly described as incomplete. This wrapper
+previously held five dangling Git commit pointers without `.gitmodules` or
+source content; they have been removed from the current tree and their IDs
+retained in the inventory. The former `rescript` pointer does not resolve to a
+commit in the currently accessible archived compiler repository, although a
+compiler tree is also present in the
 developer ecosystem. `bridge-web-rescript` is an in-tree specification and
 skeleton, not a separately hosted working framework. `rescript-wasm-runtime`
 has no current entry here, but its source is present in the developer ecosystem.
