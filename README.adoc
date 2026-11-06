@@ -6,19 +6,22 @@ Jonathan D.A. Jewell <j.d.a.jewell@open.ac.uk>
 This repository records an intended handover of ReScript-related work. It is
 not presently a bundle of seven independently transferable repositories.
 
-As checked on 2026-11-06, the public source for four named tools is unavailable
-at the URLs previously advertised. Their entries in this wrapper are Git commit
-pointers without `.gitmodules` or the pointed-to source. A fifth pointer,
-`rescript`, does not resolve to a commit in the currently accessible archived
-repository. `bridge-web-rescript` is an in-tree specification and skeleton, not
-a separately hosted working framework. `rescript-wasm-runtime` has no current
-tree entry; an older wrapper commit contains only a Git commit pointer for it.
+As checked on 2026-11-06, the advertised standalone URLs for five named tools
+are unavailable. Their source instead exists under
+https://github.com/hyperpolymath/developer-ecosystem/tree/main/rescript-ecosystem[developer-ecosystem/rescript-ecosystem],
+where consolidation is explicitly described as incomplete. This wrapper has
+four corresponding Git commit pointers without `.gitmodules` or source content.
+Its `rescript` pointer does not resolve to a commit in the currently accessible
+archived compiler repository, although a compiler tree is also present in the
+developer ecosystem. `bridge-web-rescript` is an in-tree specification and
+skeleton, not a separately hosted working framework. `rescript-wasm-runtime`
+has no current entry here, but its source is present in the developer ecosystem.
 
 See link:TRANSFER.adoc[the verified handover status] for per-item evidence,
 limits, and the work needed before offering any item to a maintainer. Earlier
 descriptions in this repository's history are historical intentions, not
 evidence that source, builds, licences, or maintainers have been verified.
 
-Discussion about recovery or stewardship can take place in an issue here.
+Discussion about reconciliation or stewardship can take place in an issue here.
 No item is currently marked ready for transfer or for an awesome-list
 submission.

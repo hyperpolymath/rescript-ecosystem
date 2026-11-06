@@ -3,8 +3,9 @@
 Jonathan D.A. Jewell <j.d.a.jewell@open.ac.uk>
 :toc: preamble
 
-Checked on 2026-11-06 against the default branch of this wrapper and the
-currently accessible GitHub repositories. This replaces the earlier transfer
+Checked on 2026-11-06 against the default branch of this wrapper, the
+current `developer-ecosystem` tree, and accessible GitHub repositories.
+This replaces the earlier transfer
 description, which remains in Git history. A Gitlink (`160000` tree entry)
 records a commit ID, not the source contents. This wrapper has no `.gitmodules`
 file to identify or fetch those child repositories.
@@ -19,51 +20,74 @@ file to identify or fetch those child repositories.
 | Gitlink `bf27354209c30432d3fac61172d451a8a4864f6c`
 | https://github.com/hyperpolymath/rescript[Repository] is accessible but
   archived. GitHub does not resolve the wrapper's pointed-to commit there.
-| Source exists at the repository's own current revision; relationship to the
-  wrapper pointer, independent modifications, build, and upstream attribution
-  need review. Not ready.
+| A compiler tree also exists at
+  https://github.com/hyperpolymath/developer-ecosystem/tree/main/rescript-ecosystem/rescript[developer-ecosystem/rescript-ecosystem/rescript].
+  Relationship among the copies and pointer, independent modifications,
+  build, and upstream attribution need review. Not ready.
 
 | `rescript-tea`
 | Gitlink `eee5abaa80e851c818160ae365c4f281cade8328`
-| Advertised `hyperpolymath/rescript-tea` repository is unavailable.
-| Locate and verify source before describing or offering it.
+| Advertised standalone repository is unavailable. A tracked
+  https://github.com/hyperpolymath/developer-ecosystem/tree/main/rescript-ecosystem/rescript-tea[source directory]
+  exists in `developer-ecosystem`.
+| Consolidation notes report source divergence and unreconciled duplicates;
+  validate the current build and reconcile before offering it.
 
 | `rescript-evangeliser`
 | Gitlink `3b97c7846c8ad52b076858dcabfb80cfff400893`
-| Advertised `hyperpolymath/rescript-evangeliser` repository is unavailable.
-| Locate and verify source before describing or offering it.
+| Advertised standalone repository is unavailable. A tracked
+  https://github.com/hyperpolymath/developer-ecosystem/tree/main/rescript-ecosystem/rescript-evangeliser[source directory]
+  exists in `developer-ecosystem`.
+| A second copy exists under `packages/tooling/evangeliser`. Reconcile and
+  validate the implementation before offering it.
 
 | `rescript-string-power`
 | Gitlink `1281d9e8ff27347dfe9ee820898f18baa5780d77`
-| Advertised `hyperpolymath/rescript-string-power` repository is unavailable.
-| Locate and verify source before describing or offering it.
+| Advertised standalone repository is unavailable. A tracked
+  https://github.com/hyperpolymath/developer-ecosystem/tree/main/rescript-ecosystem/rescript-string-power[source directory]
+  exists in `developer-ecosystem`.
+| Check its current build, tests, licence and standalone packaging before
+  offering it.
 
 | `rescript-vite`
 | Gitlink `1efd0b0c0823202e69959e55fc2b06c705bd218d`
-| Advertised `hyperpolymath/rescript-vite` repository is unavailable.
-| Locate and verify source before describing or offering it.
+| Advertised standalone repository is unavailable. A tracked
+  https://github.com/hyperpolymath/developer-ecosystem/tree/main/rescript-ecosystem/rescript-vite[source directory]
+  exists in `developer-ecosystem`.
+| Check the documented features against source, build and examples before
+  offering it.
 
 | `bridge-web-rescript`
 | Tracked directory in this wrapper, including documentation, one
   `src/Bridge.affine` placeholder, and JavaScript tests.
-| Source is available in this wrapper. The advertised standalone repository
-  is unavailable. No ReScript build configuration or compiled `lib/es6` output
-  needed by the tests is present in this directory.
+| Source is available in this wrapper; another
+  https://github.com/hyperpolymath/developer-ecosystem/tree/main/rescript-ecosystem/packages/web/bridge-web[Bridge directory]
+  exists in `developer-ecosystem`. The advertised standalone repository is
+  unavailable. The wrapper copy lacks the compiled `lib/es6` output needed
+  by its tests.
 | Specification/skeleton only. Scope, licence and test claims need correction
   before a standalone project or handover.
 
 | `rescript-wasm-runtime`
 | No entry in the current tree. Commit `75b1521` of this wrapper had a
   Gitlink to `2f9d5f8f9483a67dddb423f838ac4991bc17c034`.
-| Advertised `hyperpolymath/rescript-wasm-runtime` repository is unavailable.
-| Locate and verify source before describing or offering it.
+| Advertised standalone repository is unavailable. A tracked
+  https://github.com/hyperpolymath/developer-ecosystem/tree/main/rescript-ecosystem/packages/ffi/wasm-runtime[source directory]
+  exists in `developer-ecosystem`, including ReScript modules and examples.
+| Check the current build, runtime claims, licence and packaging before
+  offering it.
 |===
 
 An unavailable URL establishes only that the repository was not accessible
 during this check. It does not establish whether it was deleted, made private,
 renamed, or transferred. Public repository-name search did not identify the
-four missing tool repositories or the WASM runtime under another owner;
-similarly named third-party projects are not assumed to be copies.
+five missing standalone repositories under another owner; similarly named
+third-party projects are not assumed to be copies. The tracked source inside
+`developer-ecosystem` is the current recovery route. Its
+https://github.com/hyperpolymath/developer-ecosystem/blob/main/rescript-ecosystem/MIGRATION.adoc[migration record]
+states that consolidation is partial and that some packages diverge or duplicate
+one another. That record includes historical build results, not a fresh build
+verification for this handover.
 
 For Bridge, `node --test tests/bridge_test.mjs` fails before running a test:
 Node cannot import `lib/es6/src/Bridge.mjs` because that build output is absent.
@@ -73,8 +97,8 @@ framework behaviour is broken or complete.
 == What has not been verified
 
 Prior descriptions advertised versions, features, zero-dependency builds,
-production readiness, and licence fallbacks. None of those claims can be
-validated for the unavailable source. `bridge-web-rescript` also has conflicting
+production readiness, and licence fallbacks. Those claims have not been
+validated against the recovered source. `bridge-web-rescript` also has conflicting
 licence signals: its `LICENSE` text contains additional terms while files and
 metadata use `MPL-2.0` identifiers. The intended grant and any third-party
 rights need review by the owner before presenting a licence to recipients.
