@@ -1,42 +1,29 @@
 // SPDX-License-Identifier: CC-BY-SA-4.0
-= ReScript Ecosystem — Donation Staging Wrapper
+= ReScript ecosystem handover inventory
 Jonathan D.A. Jewell <j.d.a.jewell@open.ac.uk>
 :toc: preamble
 
-image:https://img.shields.io/badge/OpenSSF-Best_Practices-green?logo=opensourcesecurity[OpenSSF Best Practices,link="https://www.bestpractices.dev/en/projects/new?repo_url=https://github.com/hyperpolymath/rescript-developer-ecosystem"]
-image:https://img.shields.io/badge/License-MPL--2.0-blue.svg[License: PMPL-1.0,link="https://github.com/hyperpolymath/palimpsest-license"]
-image:https://api.thegreenwebfoundation.org/greencheckimage/github.com[Green Web,link="https://www.thegreenwebfoundation.org/green-web-check/?url=github.com"]
+This repository records an intended handover of ReScript-related work. It is
+not presently a bundle of seven independently transferable repositories.
 
-This repository is a **donation-staging wrapper** for six ReScript-related
-libraries and tools built by
-https://github.com/hyperpolymath[Hyperpolymath]. The work is offered to the
-ReScript community for long-term stewardship.
+As checked on 2026-11-06, the advertised standalone URLs for five named tools
+are unavailable. Their source instead exists under
+https://github.com/hyperpolymath/developer-ecosystem/tree/main/rescript-ecosystem[developer-ecosystem/rescript-ecosystem],
+where consolidation is explicitly described as incomplete. This wrapper
+previously held five dangling Git commit pointers without `.gitmodules` or
+source content; they have been removed from the current tree and their IDs
+retained in the inventory. The former `rescript` pointer does not resolve to a
+commit in the currently accessible archived compiler repository, although a
+compiler tree is also present in the
+developer ecosystem. `bridge-web-rescript` is an in-tree specification and
+skeleton, not a separately hosted working framework. `rescript-wasm-runtime`
+has no current entry here, but its source is present in the developer ecosystem.
 
-== What is here
+See link:TRANSFER.adoc[the verified handover status] for per-item evidence,
+limits, and the work needed before offering any item to a maintainer. Earlier
+descriptions in this repository's history are historical intentions, not
+evidence that source, builds, licences, or maintainers have been verified.
 
-Seven independent repositories are collected under this wrapper:
-
-* **rescript** — hyperpolymath fork of the upstream ReScript compiler
-* **rescript-tea** — The Elm Architecture for ReScript (v12+, ES modules, zero deps)
-* **rescript-evangeliser** — JS→ReScript pattern-detection and teaching toolkit
-* **rescript-string-power** — Tagged template utilities (SQL, CSS, GraphQL, i18n)
-* **rescript-vite** — Zero-config ReScript + Vite with examples, templates, tutorial, and scaffolder (production-ready)
-* **bridge-web-rescript** — TypeScript-free PWA framework (specification stage)
-* **rescript-wasm-runtime** — Deno + WASM runtime bindings for ReScript
-
-Each child is its own git repository with its own GitHub remote under
-`github.com/hyperpolymath/`. This wrapper holds only documentation and a
-machine-readable manifest; the children are referenced by URL, not embedded.
-
-== Read more
-
-For the full handover document — background, descriptions, licence details,
-relationship map, and instructions for taking ownership — see
-link:TRANSFER.adoc[TRANSFER.adoc].
-
-== Interested in maintaining one of these?
-
-Please open an issue on this repository or email
-mailto:j.d.a.jewell@open.ac.uk[j.d.a.jewell@open.ac.uk]. Each repository
-can be transferred or forked independently; you do not need to take the full
-bundle.
+Discussion about reconciliation or stewardship can take place in an issue here.
+No item is currently marked ready for transfer or for an awesome-list
+submission.

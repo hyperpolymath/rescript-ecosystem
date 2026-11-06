@@ -1,71 +1,71 @@
 # SPDX-License-Identifier: MPL-2.0
-# ReScript Ecosystem Donation Bundle — Machine-Readable Manifest
-# Format: A2ML (TOML-like structured data for agent/tool consumption)
+# Current source inventory; see TRANSFER.adoc for evidence and limitations.
 
 [meta]
-generated_on = "2026-04-25"
-wrapper_version = "1.1.0"
-donation_target = "ReScript community"
-contact = "j.d.a.jewell@open.ac.uk"
+verified_on = "2026-11-06"
+wrapper_version = "2.0.0"
 wrapper_repo = "https://github.com/hyperpolymath/rescript-ecosystem"
+source_aggregate = "https://github.com/hyperpolymath/developer-ecosystem/tree/main/rescript-ecosystem"
+handover_ready_count = 0
 
 [[child]]
 name = "rescript"
-repo_url = "https://github.com/hyperpolymath/rescript"
-licence = "LGPL-3.0-or-later (compiler); MIT (syntax, runtime, rewatch)"
-status = "fork-active"
-role = "fork"
-description = "Hyperpolymath fork of the upstream ReScript compiler (rescript-lang/rescript), tracking upstream with estate-specific CI integrations."
-upstream = "https://github.com/rescript-lang/rescript"
-readme_quality = "thin — README contains only a heading; see upstream for full documentation"
+advertised_repo_url = "https://github.com/hyperpolymath/rescript"
+wrapper_entry = "none; former-gitlink-at-874512f4"
+former_wrapper_commit = "bf27354209c30432d3fac61172d451a8a4864f6c"
+source_state = "repository-accessible-archived; wrapper-commit-unresolved"
+aggregate_source_path = "rescript-ecosystem/rescript"
+handover_ready = false
 
 [[child]]
 name = "rescript-tea"
-repo_url = "https://github.com/hyperpolymath/rescript-tea"
-licence = "MPL-2.0 (MPL-2.0 legal fallback)"
-status = "active"
-role = "library"
-description = "The Elm Architecture for ReScript — ground-up reimplementation for ReScript v12+, ES modules, @rescript/core. Includes virtual DOM diffing, SSR, Elm-style JSON decoders, time-travel debugger, HTTP module, and test harness. Zero runtime deps beyond @rescript/core."
+advertised_repo_url = "https://github.com/hyperpolymath/rescript-tea"
+wrapper_entry = "none; former-gitlink-at-874512f4"
+former_wrapper_commit = "eee5abaa80e851c818160ae365c4f281cade8328"
+source_state = "standalone-repository-unavailable; source-in-developer-ecosystem"
+aggregate_source_path = "rescript-ecosystem/rescript-tea"
+handover_ready = false
 
 [[child]]
 name = "rescript-evangeliser"
-repo_url = "https://github.com/hyperpolymath/rescript-evangeliser"
-licence = "MPL-2.0 (MPL-2.0 legal fallback)"
-status = "active"
-role = "tool"
-description = "JS-to-ReScript pattern-detection engine, CLI, and educational toolkit. 52 patterns across 21 categories, three view layers (RAW/FOLDED/GLYPHED), Makaton-inspired glyph system. Philosophy: celebrate good, minimize bad, show better."
-version = "0.5.0-alpha"
+advertised_repo_url = "https://github.com/hyperpolymath/rescript-evangeliser"
+wrapper_entry = "none; former-gitlink-at-874512f4"
+former_wrapper_commit = "3b97c7846c8ad52b076858dcabfb80cfff400893"
+source_state = "standalone-repository-unavailable; source-in-developer-ecosystem"
+aggregate_source_path = "rescript-ecosystem/rescript-evangeliser"
+handover_ready = false
 
 [[child]]
 name = "rescript-string-power"
-repo_url = "https://github.com/hyperpolymath/rescript-string-power"
-licence = "MPL-2.0 (MPL-2.0 legal fallback)"
-status = "active"
-role = "library"
-description = "Tagged template utilities for ReScript — type-safe SQL, CSS, GraphQL, i18n, URL, and React JSX interpolation. Zero PPX, pure library, ReScript v13 native syntax. Ships with string-union-gen Rust CLI tool for generating type-safe string converters."
-
-[[child]]
-name = "bridge-web-rescript"
-repo_url = "https://github.com/hyperpolymath/bridge-web-rescript"
-licence = "MPL-2.0 (MPL-2.0 legal fallback)"
-status = "specification-only"
-role = "specification"
-description = "TypeScript-free Progressive Web Application framework. ReScript compiled to WebAssembly, WCAG 2.3 AAA baseline accessibility, sign-language (BSL/GSL) resource support, cryptographically-verified asset loading. Infrastructure and governance in place; implementation not yet begun."
+advertised_repo_url = "https://github.com/hyperpolymath/rescript-string-power"
+wrapper_entry = "none; former-gitlink-at-874512f4"
+former_wrapper_commit = "1281d9e8ff27347dfe9ee820898f18baa5780d77"
+source_state = "standalone-repository-unavailable; source-in-developer-ecosystem"
+aggregate_source_path = "rescript-ecosystem/rescript-string-power"
+handover_ready = false
 
 [[child]]
 name = "rescript-vite"
-repo_url = "https://github.com/hyperpolymath/rescript-vite"
-licence = "MPL-2.0 (MPL-2.0 legal fallback)"
-status = "active"
-role = "developer-tooling"
-description = "Zero-config ReScript + Vite integration for modern web development. Production-ready with comprehensive examples (form validation, API fetching, component patterns, routing, state management, testing), six project templates (SPA, SSG, component library, real-time, API-driven, Deno/CLI), 15-minute getting-started tutorial, and automated project scaffolder. Features instant HMR, TypeScript-free experience, and full React interop."
-version = "1.0.0"
-readme_quality = "complete — ECOSYSTEM-COMPLETE.md capstone summary"
+advertised_repo_url = "https://github.com/hyperpolymath/rescript-vite"
+wrapper_entry = "none; former-gitlink-at-874512f4"
+former_wrapper_commit = "1efd0b0c0823202e69959e55fc2b06c705bd218d"
+source_state = "standalone-repository-unavailable; source-in-developer-ecosystem"
+aggregate_source_path = "rescript-ecosystem/rescript-vite"
+handover_ready = false
+
+[[child]]
+name = "bridge-web-rescript"
+advertised_repo_url = "https://github.com/hyperpolymath/bridge-web-rescript"
+wrapper_entry = "tracked-directory"
+source_state = "in-wrapper-specification-and-placeholder; aggregate-copy; standalone-repository-unavailable"
+aggregate_source_path = "rescript-ecosystem/packages/web/bridge-web"
+handover_ready = false
 
 [[child]]
 name = "rescript-wasm-runtime"
-repo_url = "https://github.com/hyperpolymath/rescript-wasm-runtime"
-licence = "MIT OR AGPL-3.0-or-later"
-status = "active"
-role = "library"
-description = "Deno and WASM runtime bindings for ReScript. HTTP server with type-safe routing and middleware pipeline, streaming/SSE, file upload, session management, WASM compilation utilities. Ships with 10 example applications. Note: entry point (mod.ts) is currently TypeScript pending conversion to ReScript."
+advertised_repo_url = "https://github.com/hyperpolymath/rescript-wasm-runtime"
+wrapper_entry = "absent-current-tree; historical-gitlink-at-75b1521"
+historical_wrapper_commit = "2f9d5f8f9483a67dddb423f838ac4991bc17c034"
+source_state = "standalone-repository-unavailable; source-in-developer-ecosystem"
+aggregate_source_path = "rescript-ecosystem/packages/ffi/wasm-runtime"
+handover_ready = false
