@@ -1,0 +1,7 @@
+{
+  "name": "rescript-ecosystem",
+  "private": true,
+  "devDependencies": {
+    "prettier": "3.10.1"
+  }
+}
