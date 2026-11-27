@@ -5,3 +5,5 @@ bun.lockb
 yarn.lock
 pnpm-lock.yaml
 .npmrc
+
+node_modules/
